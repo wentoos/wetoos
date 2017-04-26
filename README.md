@@ -276,10 +276,10 @@ document.body.innerHTML = son.render();
 6.jsx语法中可以嵌入变量和值职表达式，可以写js语法，不可以写js语句；=>>>用{}包裹，
 
 
-###react 组件 
+###react 组件   
 
---主要有3种方法
-####第一种
+--主要有3种方法       
+####第一种         
 ** 
 ```JS
 	React.createClass({
@@ -292,10 +292,10 @@ document.body.innerHTML = son.render();
 ReactDOM.render(<Hello_></Hello_> , document.getElementById('root'))
 //使用时假装是个标签来用<Hello_><Hello_ />
 ```
--**必须有render方法
+-**必须有render方法         
 
 
-####第二种
+####第二种      
 
 ```JS
 function Hello(){
@@ -310,7 +310,7 @@ function Hello(){
 ReactDOM.render(<Hello /> , document.getElementById('root'))
 ```
 
-####第三种方法 class
+####第三种方法 class       
 
 
 ```js
@@ -327,7 +327,7 @@ ReactDOM.render(<Hello /> , document.getElementById('root'))
 
 
 
- ###引入图片模块
+ ###引入图片模块          
 
 
  ```js
@@ -347,4 +347,4 @@ ReactDOM.render(<Hello /> , document.getElementById('root'))
  ReactDOM.render(<Hello /> , document.getElementById('root'))
  ```
 
- -**在线图片不需要引模块
+ -**在线图片不需要引模块         
