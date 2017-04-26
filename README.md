@@ -151,7 +151,8 @@ export{str,obj};
 //默认导出 export default str;
 //导入
 import {str as ccc,obj} form './test.js';
-//导入的对象放在大括号里,as:将str做为ccc使用,找不到str,注意空格,多次重复执行同一句import语句，那么只会执行一次，而不会执行多次
+//导入的对象放在大括号里,as:将str做为ccc使用,找不到str,注意空格,
+多次重复执行同一句import语句，那么只会执行一次，而不会执行多次
 console.log(str);
 ```
 ##数组的map:实现for循环的功能,可以随意在map里面写函数
@@ -339,7 +340,7 @@ ReactDOM.render(<Hello /> , document.getElementById('root'))
 	 		<div>
 	 			<div>我是第三种</div>
 	 			<img src={ img } />
-	 			<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1493800697&di=aa215a64fad5515ae202275797988751&imgtype=jpg&er=1&src=http%3A%2F%2Fi.guancha.cn%2Fnews%2F2015%2F10%2F16%2F20151016135551745.jpg" />
+	 			<img src="https://timgsa.baidu.com/timg?image&qual51016135551745.jpg" />
 	 		</div>
 	 			)
  	}
