@@ -348,4 +348,61 @@ ReactDOM.render(<Hello /> , document.getElementById('root'))
  ReactDOM.render(<Hello /> , document.getElementById('root'))
  ```
 
- -**在线图片不需要引模块         
+ -**在线图片不需要引模块  
+
+
+
+
+ ###引入样式表     
+
+
+-内部样式表
+```js
+import  './style.css'  //以模块的方式引入样式 为内部样式表；     
+```  
+
+-行内样式表
+
+```js
+
+class Hello extends React.Component {
+ 	render () {
+	 	return (
+	 		<div>
+	 			<div >我是第三种</div>
+	 			<img src={ img } alt="666" />
+	 		</div>
+	 			)
+ 	}
+ }
+ //style 属性使用驼峰命名法书写，伪类样式不支持；
+ ```
+
+
+
+
+### theme 风格
+
+```js   
+import React from 'react';
+export let blueStyle = 'blue'
+```
+类似于引入插件 修改对应的js就可修改所有主色调；
+
+
+
+###对象合并  es7    
+
+
+```js
+let c ={a:1};
+let s ={b:2};
+let e ={c:3};
+Object.assign(c,s,e);
+console.log(c);
+//对象的合并 合并到 目标对象中，
+```
+
+
+   
+
