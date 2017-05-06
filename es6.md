@@ -207,3 +207,47 @@ console.log(x);//a:{b:1}
 ```   
 ***
 #es6   函数
+
+
+###箭头函数   
+
+
+()为参数一个的时候可以省略、多个不能省略用,隔开、没有的时候不能省略。
+ =>为返回值，返回一个对象的时候用小括号包起来。
+执行多条js语句用{}包起来,需要自己写返回值。
+箭头函数指向的this在声明时就会绑定，以后所有的this都指向声明时的this。
+```js
+let a = () => 8;等于
+function a() {
+	  return 8;
+	}
+	
+```js
+	let a = (num,num1) => num*num1;
+	console.log(a(5,8));
+```
+
+
+```js
+let a = (num,num1) =>{
+	num++;
+	num1++;
+	return num+num1;
+}
+console.log(a(5,8));
+```
+```js
+let a = (num,num1) =>({name:'sayname'});
+console.log(a)
+```
+```js
+function foo(){
+	console.log(this);
+	setTimeout(() =>{
+		console.log(this);
+		console.log(this.id);
+	},1000)
+};
+var id = 21;
+foo.call({id:42},12);
+```
