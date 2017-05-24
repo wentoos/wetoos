@@ -25,3 +25,6 @@
 - cd my-app/  
 - npm start  
 执行完上述命令之后，你可以直接打开http://localhost:3000，即可以看到你React APP的运行效果。此时也是处于开发模式下，如果你要进行发布，则使用npm run build进行编译。
+***
+### 语法高亮 highlight.js   
+使用方法
