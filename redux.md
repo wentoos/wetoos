@@ -38,5 +38,32 @@ let store = createStore(storeData)
 export default store
 ```
 
-- 这样就将store 中的状态树全部导出了.   
-createStore()  可接收三个参数, 其中必填的为 Reducer
+- 这样就将store 中的状态树全部导出了.
+
+> screateStore( )  可接收三个参数, 其中必填的为 Reducer 修改器 preloadedState，预加载 State ，这一项是可选的
+enhancer，增强器，选填  
+
+###   reducer
+reducer 和 store 一样是 redux 三大核心概念之一。reducer 是 一个函数，用来修改 store 中的数据。  
+```
+function commentReducer(state = [], action) {
+  switch (action.type) {
+    case 'ADD_COMMENT':
+        return [...state, action.comment]
+    default:
+        return state
+  }
+}
+```
+>其中commentReducer(oldState , action)  => newState   
+oldState: 代表原来的状态树   
+action: 是从组件中接收的数据和数据类型，从而对数据进行分发，redux 同 react 有着一样的规定就是不能直接修改 store    
+*可以通过对象的拷贝、数组的展开、数字等的间接修改来达到相应的效果   
+
+### action
+- 那么如何从组件发出 action 数据呢？
+```
+store.dispatch({type:'ADD_COMMENT',comment:comment})
+```
+- 而 store 负责接收 action 的正是 Reducer 经由这个函数间接的修改 store，
+这样就达到我的目的了。
